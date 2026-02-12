@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TshirtFormMockup.MainPage">
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Text="New" Clicked="OnMenuClick" CommandParameter="File/New" />
+            <MenuFlyoutItem Text="Open" Clicked="OnMenuClick" CommandParameter="File/Open" />
+            <MenuFlyoutItem Text="Save" Clicked="OnMenuClick" CommandParameter="File/Save" />
+            <MenuFlyoutSeparator />
+            <MenuFlyoutItem Text="Exit" Clicked="OnMenuClick" CommandParameter="File/Exit" />
+        </MenuBarItem>
+        <MenuBarItem Text="Edit">
+            <MenuFlyoutItem Text="Undo" Clicked="OnMenuClick" CommandParameter="Edit/Undo" />
+            <MenuFlyoutItem Text="Redo" Clicked="OnMenuClick" CommandParameter="Edit/Redo" />
+            <MenuFlyoutSeparator />
+            <MenuFlyoutItem Text="Copy" Clicked="OnMenuClick" CommandParameter="Edit/Copy" />
+            <MenuFlyoutItem Text="Paste" Clicked="OnMenuClick" CommandParameter="Edit/Paste" />
+        </MenuBarItem>
+        <MenuBarItem Text="View">
+            <MenuFlyoutItem Text="Refresh" Clicked="OnMenuClick" CommandParameter="View/Refresh" />
+            <MenuFlyoutItem Text="Toggle Theme" Clicked="OnMenuClick" CommandParameter="View/Toggle Theme" />
+        </MenuBarItem>
+        <MenuBarItem Text="Help">
+            <MenuFlyoutItem Text="About" Clicked="OnMenuClick" CommandParameter="Help/About" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+    <!-- Main content area + About overlay -->
+    <Grid>
+
+        <!-- Main page content — terminal style -->
+        <ScrollView BackgroundColor="Black" Padding="16">
+            <Label x:Name="TerminalOutput"
+                   FontFamily="Consolas"
+                   FontSize="14"
+                   TextColor="#00FF00"
+                   VerticalOptions="Start">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="MomPro System Monitor v∞&#x0a;Initializing MomPro...&#x0a;Starting MomPro...&#x0a;&#x0a;[OK] BackgroundListening.service&#x0a;[OK] KnowsYouDidSomething.task&#x0a;[OK] FindsLostThings.thread&#x0a;[OK] WorryEngine.core&#x0a;[OK] ScheduleMemory.cache&#x0a;[OK] LunchReminder.service&#x0a;[OK] HomeworkVerification.daemon&#x0a;[OK] MultitaskingEngine.proc&#x0a;[OK] EmotionalTelemetry.sensor&#x0a;[OK] LifeExperience.db&#x0a;&#x0a;All systems nominal.&#x0a;&#x0a;Checking surroundings...&#x0a;Listening...&#x0a;" TextColor="#00FF00" />
+                        <Span Text="Warning: Jacket not detected&#x0a;" TextColor="Red" />
+                        <Span Text="Processing..." TextColor="#00FF00" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </ScrollView>
+
+        <!-- ═══ About Dialog Overlay ═══ -->
+        <Grid x:Name="AboutOverlay" IsVisible="False"
+              BackgroundColor="#80000000"
+              HorizontalOptions="Fill"
+              VerticalOptions="Fill">
+
+            <!-- Tap outside to close -->
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnAboutOverlayTapped" />
+            </Grid.GestureRecognizers>
+
+            <Border StrokeShape="RoundRectangle 12"
+                    Stroke="{StaticResource Gray600}"
+                    StrokeThickness="1"
+                    BackgroundColor="{StaticResource Gray950}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="480"
+                    HeightRequest="520"
+                    Padding="0">
+
+                <!-- Prevent taps on the dialog from closing it -->
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </Border.GestureRecognizers>
+
+                <ScrollView VerticalOptions="Fill">
+                    <VerticalStackLayout Padding="30" Spacing="16">
+
+                        <!-- TOP — Title -->
+                        <Label Text="About: Mom™ Pro"
+                               FontSize="28"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource White}" />
+
+                        <BoxView HeightRequest="1"
+                                 Color="{StaticResource Gray600}" />
+
+                        <Label Text="Does everything, complains about nothing"
+                               FontSize="14"
+                               FontAttributes="Italic"
+                               TextColor="{StaticResource Gray300}" />
+
+                        <Label Text="Background processes running at all times"
+                               FontSize="12"
+                               TextColor="{StaticResource Gray400}" />
+
+                        <!-- MIDDLE — Details -->
+                        <Border StrokeShape="RoundRectangle 8"
+                                Stroke="{StaticResource Gray600}"
+                                StrokeThickness="1"
+                                BackgroundColor="{StaticResource Gray900}"
+                                Padding="20,16">
+
+                            <Grid ColumnDefinitions="Auto,*"
+                                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+                                  ColumnSpacing="14" RowSpacing="8">
+
+                                <Label Grid.Row="0" Grid.Column="0" Text="Version:"
+                                       FontAttributes="Bold" TextColor="{StaticResource Gray300}" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="1.0"
+                                       TextColor="{StaticResource White}" />
+
+                                <Label Grid.Row="1" Grid.Column="0" Text="Build:"
+                                       FontAttributes="Bold" TextColor="{StaticResource Gray300}" />
+                                <Label Grid.Row="1" Grid.Column="1" Text="Indestructible"
+                                       TextColor="{StaticResource White}" />
+
+                                <Label Grid.Row="2" Grid.Column="0" Text="Uptime:"
+                                       FontAttributes="Bold" TextColor="{StaticResource Gray300}" />
+                                <Label Grid.Row="2" Grid.Column="1" Text="24/7"
+                                       TextColor="{StaticResource White}" />
+
+                                <Label Grid.Row="3" Grid.Column="0" Text="License:"
+                                       FontAttributes="Bold" TextColor="{StaticResource Gray300}" />
+                                <Label Grid.Row="3" Grid.Column="1" Text="Lifetime"
+                                       TextColor="{StaticResource White}" />
+
+                                <Label Grid.Row="4" Grid.Column="0" Text="Permissions:"
+                                       FontAttributes="Bold" TextColor="{StaticResource Gray300}" />
+                                <Label Grid.Row="4" Grid.Column="1" Text="Full Access"
+                                       TextColor="{StaticResource White}" />
+
+                                <Label Grid.Row="5" Grid.Column="0" Text="Support Email:"
+                                       FontAttributes="Bold" TextColor="{StaticResource Gray300}" />
+                                <Label Grid.Row="5" Grid.Column="1" Text="nosupportneeded@mompro.local"
+                                       TextColor="{StaticResource Cyan100Accent}" />
+                            </Grid>
+                        </Border>
+
+                        <!-- FOOTER -->
+                        <VerticalStackLayout Spacing="2" Margin="0,4,0,0">
+                            <Label Text="© Forever" FontSize="10" TextColor="{StaticResource Gray500}" />
+                            <Label Text="All Rights Reserved" FontSize="10" TextColor="{StaticResource Gray500}" />
+                            <Label Text="Unauthorized Arguments Will Be Ignored"
+                                   FontSize="10" FontAttributes="Italic" TextColor="{StaticResource Gray500}" />
+                        </VerticalStackLayout>
+
+                        <!-- OK Button -->
+                        <Button Text="OK"
+                                Clicked="OnAboutCloseClicked"
+                                BackgroundColor="{StaticResource Primary}"
+                                TextColor="{StaticResource White}"
+                                CornerRadius="8"
+                                WidthRequest="100"
+                                HeightRequest="36"
+                                HorizontalOptions="Start" />
+
+                    </VerticalStackLayout>
+                </ScrollView>
+            </Border>
+        </Grid>
+    </Grid>
+
+</ContentPage>
