@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="Terminal_Output_Text" xml:space="preserve"><value>Salida del terminal simulada: ¡Bienvenido!</value></data>
+    <data name="About_Title" xml:space="preserve"><value>Acerca de Madre™ Pro</value></data>
+    <data name="About_Subtitle" xml:space="preserve"><value>Gestión avanzada de formularios</value></data>
+    <data name="About_BackgroundProcesses" xml:space="preserve"><value>Procesos en segundo plano activos</value></data>
+    <data name="About_VersionLabel" xml:space="preserve"><value>Versión:</value></data>
+    <data name="About_Version" xml:space="preserve"><value>1.0</value></data>
+    <data name="About_BuildLabel" xml:space="preserve"><value>Compilación:</value></data>
+    <data name="About_Build" xml:space="preserve"><value>2026-03-11</value></data>
+    <data name="About_UptimeLabel" xml:space="preserve"><value>Tiempo activo:</value></data>
+    <data name="About_Uptime" xml:space="preserve"><value>0 días</value></data>
+    <data name="About_LicenseLabel" xml:space="preserve"><value>Licencia:</value></data>
+    <data name="About_License" xml:space="preserve"><value>Uso interno</value></data>
+  <data name="MainWindow_Title" xml:space="preserve"><value>Madre™ Pro v 1.0</value></data>
+  <data name="SubmitButton_Text" xml:space="preserve"><value>Enviar</value></data>
+  <data name="Menu_File" xml:space="preserve"><value>Archivo</value></data>
+  <data name="Menu_New" xml:space="preserve"><value>Nuevo</value></data>
+  <data name="Menu_Open" xml:space="preserve"><value>Abrir</value></data>
+  <data name="Menu_Save" xml:space="preserve"><value>Guardar</value></data>
+  <data name="Menu_Exit" xml:space="preserve"><value>Salir</value></data>
+  <data name="Menu_Edit" xml:space="preserve"><value>Editar</value></data>
+  <data name="Menu_Undo" xml:space="preserve"><value>Deshacer</value></data>
+  <data name="Menu_Redo" xml:space="preserve"><value>Rehacer</value></data>
+  <data name="Menu_Copy" xml:space="preserve"><value>Copiar</value></data>
+  <data name="Menu_Paste" xml:space="preserve"><value>Pegar</value></data>
+  <data name="Menu_View" xml:space="preserve"><value>Vista</value></data>
+  <data name="Menu_Refresh" xml:space="preserve"><value>Actualizar</value></data>
+  <data name="Menu_ToggleTheme" xml:space="preserve"><value>Cambiar tema</value></data>
+  <data name="Menu_Help" xml:space="preserve"><value>Ayuda</value></data>
+  <data name="Menu_About" xml:space="preserve"><value>Acerca de</value></data>
+</root>

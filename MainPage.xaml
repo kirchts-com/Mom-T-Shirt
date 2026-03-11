@@ -39,7 +39,7 @@
                    VerticalOptions="Start">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="MomPro System Monitor v∞&#x0a;Initializing MomPro...&#x0a;Starting MomPro...&#x0a;&#x0a;[OK] BackgroundListening.service&#x0a;[OK] KnowsYouDidSomething.task&#x0a;[OK] FindsLostThings.thread&#x0a;[OK] WorryEngine.core&#x0a;[OK] ScheduleMemory.cache&#x0a;[OK] LunchReminder.service&#x0a;[OK] HomeworkVerification.daemon&#x0a;[OK] MultitaskingEngine.proc&#x0a;[OK] EmotionalTelemetry.sensor&#x0a;[OK] LifeExperience.db&#x0a;&#x0a;All systems nominal.&#x0a;&#x0a;Checking surroundings...&#x0a;Listening...&#x0a;" TextColor="#00FF00" />
+                        <Span Text="MomPro System 1.0&#x0a;Initializing MomPro...&#x0a;Starting MomPro...&#x0a;&#x0a;[OK] BackgroundListening.service&#x0a;[OK] KnowsYouDidSomething.task&#x0a;[OK] FindsLostThings.thread&#x0a;[OK] WorryEngine.core&#x0a;[OK] ScheduleMemory.cache&#x0a;[OK] LunchReminder.service&#x0a;[OK] HomeworkVerification.daemon&#x0a;[OK] MultitaskingEngine.proc&#x0a;[OK] EmotionalTelemetry.sensor&#x0a;[OK] LifeExperience.db&#x0a;&#x0a;All systems nominal.&#x0a;&#x0a;Checking surroundings...&#x0a;Listening...&#x0a;" TextColor="#00FF00" />
                         <Span Text="Warning: Jacket not detected&#x0a;" TextColor="Red" />
                         <Span Text="Processing..." TextColor="#00FF00" />
                     </FormattedString>

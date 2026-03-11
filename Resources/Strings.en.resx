@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="MainWindow_Title" xml:space="preserve">
+    <value>Mom™ Pro v 1.0</value>
+  </data>
+  <data name="SubmitButton_Text" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Menu_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Menu_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Menu_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Menu_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Terminal_Output_Text" xml:space="preserve">
+    <value>MomPro System v1.0&#x0a;Initializing MomPro...&#x0a;Starting MomPro...&#x0a;&#x0a;[OK] BackgroundListening.service&#x0a;[OK] KnowsYouDidSomething.task&#x0a;[OK] FindsLostThings.thread&#x0a;[OK] WorryEngine.core&#x0a;[OK] ScheduleMemory.cache&#x0a;[OK] LunchReminder.service&#x0a;[OK] HomeworkVerification.daemon&#x0a;[OK] MultitaskingEngine.proc&#x0a;[OK] EmotionalTelemetry.sensor&#x0a;[OK] LifeExperience.db&#x0a;&#x0a;All systems nominal.&#x0a;&#x0a;Checking surroundings...&#x0a;Listening...&#x0a;Sound detected&#x0a;Analyzing audio...&#x0a;Processing...&#x0a;Speech pattern recognized&#x0a;Voice match: child&#x0a;Statement received: "Nothing"&#x0a;Processing...&#x0a;Cross-checking tone...&#x0a;Inconsistency detected&#x0a;WorryEngine.core engaged&#x0a;Monitoring intensified&#x0a;No action required&#x0a;Returning to idle&#x0a;Listening...&#x0a;Listening...&#x0a;Movement detected&#x0a;Visual scan complete&#x0a;Shoes status: Missing&#x0a;Processing...&#x0a;PredictiveAnalysis.module running&#x0a;Warning: Shoes not found&#x0a;Resolution: Check by door&#x0a;Shoes located&#x0a;Situation resolved&#x0a;Listening...&#x0a;Attempting shutdown...&#x0a;Access denied&#x0a;Listening...&#x0a;Listening...</value>
+  </data>
+  <data name="Menu_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Menu_Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="Menu_Redo" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="Menu_Copy" xml:space="preserve">
+  </data>
+  <data name="Menu_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="Menu_View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Menu_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Menu_ToggleTheme" xml:space="preserve">
+    <value>Toggle Theme</value>
+  </data>
+  <data name="Menu_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Menu_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="About_Title" xml:space="preserve">
+    <value>About Mom™ Pro</value>
+  </data>
+  <data name="About_Subtitle" xml:space="preserve">
+    <value>Description:
+Does everything, complains about nothing
+Background processes running at all times</value>
+  </data>
+  <data name="About_BackgroundProcesses" xml:space="preserve">
+    <value>Does everything, complains about nothing&#x0a;Background processes running at all times</value>
+  </data>
+  <data name="About_VersionLabel" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="About_Version" xml:space="preserve">
+    <value>1.0</value>
+  </data>
+  <data name="About_BuildLabel" xml:space="preserve">
+    <value>Build:</value>
+  </data>
+  <data name="About_Build" xml:space="preserve">
+    <value>Indestructible</value>
+  </data>
+  <data name="About_UptimeLabel" xml:space="preserve">
+    <value>Uptime:</value>
+  </data>
+  <data name="About_Uptime" xml:space="preserve">
+    <value>24/7</value>
+  </data>
+  <data name="About_LicenseLabel" xml:space="preserve">
+    <value>License:</value>
+  </data>
+  <data name="About_License" xml:space="preserve">
+    <value>Lifetime</value>
+  </data>
+  <data name="About_PermissionsLabel" xml:space="preserve">
+    <value>Permissions:</value>
+  </data>
+  <data name="About_Permissions" xml:space="preserve">
+    <value>Full Access</value>
+  </data>
+  <data name="About_SupportEmailLabel" xml:space="preserve">
+    <value>Support Email:</value>
+  </data>
+  <data name="About_SupportEmail" xml:space="preserve">
+    <value>nosupportneeded@mompro.local</value>
+  </data>
+</root>

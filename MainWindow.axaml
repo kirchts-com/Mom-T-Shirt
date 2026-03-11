@@ -2,17 +2,17 @@
     ExtendClientAreaToDecorationsHint="True"
     ExtendClientAreaChromeHints="NoChrome"
     ExtendClientAreaTitleBarHeightHint="0"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="1024"
-        x:Class="TshirtFormMockup.MainWindow"
-        Title="Mom™ Pro v 1.0">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="1024"
+    x:Class="TshirtFormMockup.MainWindow"
+    Title="{Binding TitleBarText}">
 
     <DockPanel>
                 <!-- Custom Title Bar -->
                     <DockPanel DockPanel.Dock="Top" Height="100" Background="#222" PointerPressed="OnTitleBarPointerPressed">
-                        <TextBlock Text="Mom™ Pro v 1.0" FontSize="60" Foreground="White" VerticalAlignment="Center" Margin="30,0,0,0" />
+                        <TextBlock Text="{Binding TitleBarText}" FontSize="60" Foreground="White" VerticalAlignment="Center" Margin="30,0,0,0" />
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,30,0">
                             <Button Content="_" Width="60" Height="60" FontSize="40" Click="OnMinimizeClick" />
                             <Button Content="□" Width="60" Height="60" FontSize="40" Click="OnMaximizeClick" />
@@ -21,26 +21,26 @@
                     </DockPanel>
         <!-- ═══ Menu Bar ═══ -->
         <Menu DockPanel.Dock="Top" FontSize="42" Height="70">
-            <MenuItem Header="_File" FontSize="42">
-                <MenuItem Header="_New" Tag="File/New" Click="OnMenuClick" />
-                <MenuItem Header="_Open" Tag="File/Open" Click="OnMenuClick" />
-                <MenuItem Header="_Save" Tag="File/Save" Click="OnMenuClick" />
+            <MenuItem Header="{Binding MenuFile}" FontSize="42">
+                <MenuItem Header="{Binding MenuNew}" Tag="File/New" Click="OnMenuClick" />
+                <MenuItem Header="{Binding MenuOpen}" Tag="File/Open" Click="OnMenuClick" />
+                <MenuItem Header="{Binding MenuSave}" Tag="File/Save" Click="OnMenuClick" />
                 <Separator />
-                <MenuItem Header="E_xit" Tag="File/Exit" Click="OnMenuClick" />
+                <MenuItem Header="{Binding MenuExit}" Tag="File/Exit" Click="OnMenuClick" />
             </MenuItem>
-            <MenuItem Header="_Edit" FontSize="42">
-                <MenuItem Header="_Undo" Tag="Edit/Undo" Click="OnMenuClick" />
-                <MenuItem Header="_Redo" Tag="Edit/Redo" Click="OnMenuClick" />
+            <MenuItem Header="{Binding MenuEdit}" FontSize="42">
+                <MenuItem Header="{Binding MenuUndo}" Tag="Edit/Undo" Click="OnMenuClick" />
+                <MenuItem Header="{Binding MenuRedo}" Tag="Edit/Redo" Click="OnMenuClick" />
                 <Separator />
-                <MenuItem Header="_Copy" Tag="Edit/Copy" Click="OnMenuClick" />
-                <MenuItem Header="_Paste" Tag="Edit/Paste" Click="OnMenuClick" />
+                <MenuItem Header="{Binding MenuCopy}" Tag="Edit/Copy" Click="OnMenuClick" />
+                <MenuItem Header="{Binding MenuPaste}" Tag="Edit/Paste" Click="OnMenuClick" />
             </MenuItem>
-            <MenuItem Header="_View" FontSize="42">
-                <MenuItem Header="_Refresh" Tag="View/Refresh" Click="OnMenuClick" />
-                <MenuItem Header="_Toggle Theme" Tag="View/Toggle Theme" Click="OnMenuClick" />
+            <MenuItem Header="{Binding MenuView}" FontSize="42">
+                <MenuItem Header="{Binding MenuRefresh}" Tag="View/Refresh" Click="OnMenuClick" />
+                <MenuItem Header="{Binding MenuToggleTheme}" Tag="View/Toggle Theme" Click="OnMenuClick" />
             </MenuItem>
-            <MenuItem Header="_Help" FontSize="42">
-                <MenuItem Header="_About" Tag="Help/About" Click="OnMenuClick" />
+            <MenuItem Header="{Binding MenuHelp}" FontSize="42">
+                <MenuItem Header="{Binding MenuAbout}" Tag="Help/About" Click="OnMenuClick" />
             </MenuItem>
         </Menu>
 
@@ -53,7 +53,7 @@
                                      FontFamily="Consolas"
                                      FontSize="42"
                                      Foreground="#C0C0C0"
-                                     Text="MomPro System 1.0&#x0a;Initializing MomPro...&#x0a;Starting MomPro...&#x0a;&#x0a;[OK] BackgroundListening.service&#x0a;[OK] KnowsYouDidSomething.task&#x0a;[OK] FindsLostThings.thread&#x0a;[OK] WorryEngine.core&#x0a;[OK] ScheduleMemory.cache&#x0a;[OK] LunchReminder.service&#x0a;[OK] HomeworkVerification.daemon&#x0a;[OK] MultitaskingEngine.proc&#x0a;[OK] EmotionalTelemetry.sensor&#x0a;[OK] LifeExperience.db&#x0a;&#x0a;All systems nominal.&#x0a;&#x0a;Checking surroundings...&#x0a;Listening...&#x0a;Sound detected&#x0a;Analyzing audio...&#x0a;Processing...&#x0a;Speech pattern recognized&#x0a;KnownVoice.child&#x0a;Statement received: &quot;Nothing&quot;&#x0a;Processing...&#x0a;Cross-checking tone...&#x0a;Inconsistency detected&#x0a;WorryEngine.core engaged&#x0a;Monitoring intensified&#x0a;No action required&#x0a;Returning to idle&#x0a;Listening...&#x0a;Listening...&#x0a;Movement detected&#x0a;Visual scan complete&#x0a;Shoes status: Missing&#x0a;Processing...&#x0a;PredictiveAnalysis.module running&#x0a;Warning: Shoes not found&#x0a;Resolution: Check by door&#x0a;Shoes located&#x0a;Situation resolved&#x0a;Listening...&#x0a;Attempting shutdown...&#x0a;Access denied&#x0a;Listening...&#x0a;Listening..." />
+                                     Text="{Binding TerminalOutputText}" />
             </ScrollViewer>
 
             <!-- ═══ About Dialog Overlay ═══ -->
@@ -72,23 +72,25 @@
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
                         <StackPanel Margin="30" Spacing="16">
 
+
                             <!-- TOP — Title -->
-                            <TextBlock Text="About: Mom™ Pro"
+                            <TextBlock Text="{Binding AboutTitle}"
                                        FontSize="80"
                                        FontWeight="Bold"
                                        Foreground="White" />
 
                             <Separator Height="1" Background="#404040" />
 
-                            <TextBlock x:Name="AboutSubtitle" Text="Does everything, complains about nothing"
-                                       FontSize="40"
-                                       FontStyle="Italic"
-                                       Foreground="#ACACAC" />
-
+                            <!-- Emphasized subtitle -->
+                            <TextBlock Text="Does everything, complains about nothing"
+                                       FontSize="38"
+                                       FontWeight="SemiBold"
+                                       Foreground="#ACACAC"
+                                       Margin="0,10,0,0" />
                             <TextBlock Text="Background processes running at all times"
                                        FontSize="34"
-                                       Foreground="#919191" />
-                            <TextBlock Text="" Height="28" />
+                                       Foreground="#919191"
+                                       Margin="0,8,0,28" />
 
                             <!-- MIDDLE — Details -->
                             <Border CornerRadius="8"
@@ -106,17 +108,17 @@
                                             </Style>
                                         </Grid.Styles>
 
-                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Version:" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
-                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="1.0" Foreground="White" FontSize="40" />
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding AboutVersionLabel}" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding AboutVersion}" Foreground="White" FontSize="40" />
 
-                                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Build:" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
-                                        <TextBlock Grid.Row="1" Grid.Column="1" Text="Indestructible" Foreground="White" FontSize="40" />
+                                        <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding AboutBuildLabel}" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
+                                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding AboutBuild}" Foreground="White" FontSize="40" />
 
-                                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Uptime:" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
-                                        <TextBlock Grid.Row="2" Grid.Column="1" Text="24/7" Foreground="White" FontSize="40" />
+                                        <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding AboutUptimeLabel}" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
+                                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding AboutUptime}" Foreground="White" FontSize="40" />
 
-                                        <TextBlock Grid.Row="3" Grid.Column="0" Text="License:" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
-                                        <TextBlock Grid.Row="3" Grid.Column="1" Text="Lifetime" Foreground="White" FontSize="40" />
+                                        <TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding AboutLicenseLabel}" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
+                                        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding AboutLicense}" Foreground="White" FontSize="40" />
 
                                         <TextBlock Grid.Row="4" Grid.Column="0" Text="Permissions:" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
                                         <TextBlock Grid.Row="4" Grid.Column="1" Text="Full Access" Foreground="White" FontSize="40" />

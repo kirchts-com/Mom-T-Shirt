@@ -16,6 +16,17 @@
         },
         "runtime": {
           "TshirtFormMockup.dll": {}
+        },
+        "resources": {
+          "en/TshirtFormMockup.resources.dll": {
+            "locale": "en"
+          },
+          "es/TshirtFormMockup.resources.dll": {
+            "locale": "es"
+          },
+          "fr/TshirtFormMockup.resources.dll": {
+            "locale": "fr"
+          }
         }
       },
       "Avalonia/11.0.10": {

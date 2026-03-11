@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="MainWindow_Title" xml:space="preserve">
+    <value>Maquette de formulaire de T-shirt</value>
+  </data>
+  <data name="SubmitButton_Text" xml:space="preserve">
+    <value>Soumettre</value>
+  </data>
+  <!-- Add more UI string keys as needed -->
+</root>
