@@ -100,4 +100,13 @@ Background processes running at all times</value>
   <data name="About_SupportEmail" xml:space="preserve">
     <value>nosupportneeded@mompro.local</value>
   </data>
+  <data name="About_Forever" xml:space="preserve">
+    <value>Forever</value>
+  </data>
+  <data name="About_AllRightsReserved" xml:space="preserve">
+    <value>All Rights Reserved</value>
+  </data>
+  <data name="About_UnauthorizedArguments" xml:space="preserve">
+    <value>Unauthorized arguments will be ignored</value>
+  </data>
 </root>

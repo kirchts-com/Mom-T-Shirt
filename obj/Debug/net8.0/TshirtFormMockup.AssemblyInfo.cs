@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TshirtFormMockup")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41ff9f92400f1eb10953fe2f8c190ce34e3e9bbc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+446ca05976835d0c2fca0a013e932aca8c774deb")]
 [assembly: System.Reflection.AssemblyProductAttribute("TshirtFormMockup")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TshirtFormMockup")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

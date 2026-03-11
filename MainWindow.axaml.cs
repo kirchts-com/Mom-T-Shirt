@@ -8,7 +8,14 @@ public partial class MainWindow : Window
 {
     public string TerminalOutputText => Localization.Localizer.GetString("Terminal_Output_Text");
     public string AboutTitle => Localization.Localizer.GetString("About_Title");
-    // Removed duplicate AboutSubtitle property
+    public string AboutSubtitle => Localization.Localizer.GetString("About_Subtitle");
+        public string AboutPermissionsLabel => Localization.Localizer.GetString("About_PermissionsLabel");
+        public string AboutPermissions => Localization.Localizer.GetString("About_Permissions");
+        public string AboutSupportEmailLabel => Localization.Localizer.GetString("About_SupportEmailLabel");
+        public string AboutSupportEmail => Localization.Localizer.GetString("About_SupportEmail");
+        public string AboutForever => Localization.Localizer.GetString("About_Forever");
+        public string AboutAllRightsReserved => Localization.Localizer.GetString("About_AllRightsReserved");
+        public string AboutUnauthorizedArguments => Localization.Localizer.GetString("About_UnauthorizedArguments");
     public string AboutBackgroundProcesses => Localization.Localizer.GetString("About_BackgroundProcesses");
     public string AboutVersionLabel => Localization.Localizer.GetString("About_VersionLabel");
     public string AboutVersion => Localization.Localizer.GetString("About_Version");

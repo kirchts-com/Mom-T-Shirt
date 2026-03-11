@@ -82,12 +82,12 @@
                             <Separator Height="1" Background="#404040" />
 
                             <!-- Emphasized subtitle -->
-                            <TextBlock Text="Does everything, complains about nothing"
+                            <TextBlock Text="{Binding AboutSubtitle}"
                                        FontSize="38"
                                        FontWeight="SemiBold"
                                        Foreground="#ACACAC"
                                        Margin="0,10,0,0" />
-                            <TextBlock Text="Background processes running at all times"
+                            <TextBlock Text="{Binding AboutBackgroundProcesses}"
                                        FontSize="34"
                                        Foreground="#919191"
                                        Margin="0,8,0,28" />
@@ -120,11 +120,11 @@
                                         <TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding AboutLicenseLabel}" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
                                         <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding AboutLicense}" Foreground="White" FontSize="40" />
 
-                                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Permissions:" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
-                                        <TextBlock Grid.Row="4" Grid.Column="1" Text="Full Access" Foreground="White" FontSize="40" />
+                                        <TextBlock Grid.Row="4" Grid.Column="0" Text="{Binding AboutPermissionsLabel}" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
+                                        <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding AboutPermissions}" Foreground="White" FontSize="40" />
 
-                                        <TextBlock Grid.Row="5" Grid.Column="0" Text="Support Email:" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
-                                        <TextBlock Grid.Row="5" Grid.Column="1" Text="nosupportneeded@mompro.local" Foreground="#ACACAC" FontSize="40" />
+                                        <TextBlock Grid.Row="5" Grid.Column="0" Text="{Binding AboutSupportEmailLabel}" FontWeight="Bold" Foreground="#B0B0B0" FontSize="36" Margin="0,4,14,4" />
+                                        <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding AboutSupportEmail}" Foreground="#ACACAC" FontSize="40" />
                                     </Grid>
                                     <TextBlock Text="" Height="28" />
                                 </StackPanel>
@@ -133,11 +133,11 @@
                             <!-- FOOTER -->
                             <StackPanel Spacing="2" Margin="0,4,0,0">
                                 <TextBlock Text="" Height="28" />
-                                <TextBlock Text="© Forever" FontSize="28" Foreground="#6E6E6E" />
-                                <TextBlock Text="All Rights Reserved" FontSize="28" Foreground="#6E6E6E" />
-                                <TextBlock Text="Unauthorized Arguments Will Be Ignored"
+                                <TextBlock Text="{Binding AboutForever}" FontSize="28" Foreground="#6E6E6E" />
+                                <TextBlock Text="{Binding AboutAllRightsReserved}" FontSize="28" Foreground="#6E6E6E" />
+                                <TextBlock Text="{Binding AboutUnauthorizedArguments}"
                                            FontSize="28" FontStyle="Italic" Foreground="#6E6E6E" />
-                            <TextBlock Text="" Height="28" />
+                                <TextBlock Text="" Height="28" />
                             </StackPanel>
 
                             <!-- OK Button -->
